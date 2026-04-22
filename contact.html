@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Grivia</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2E7D32;
+            --secondary-green: #4CAF50;
+            --bg-light: #F1F8E9;
+            --text-dark: #1B5E20;
+            --error: #D32F2F;
+            --gradient-primary: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        .auth-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--bg-light) 0%, #E8F5E8 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .auth-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path d="M0,200 Q500,0 1000,200 L1000,800 Q500,1000 0,800 Z" fill="%234CAF50" opacity="0.1"/></svg>') no-repeat;
+            background-size: cover;
+        }
+        
+        .auth-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .auth-logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .auth-logo img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1rem;
+            border-radius: 12px;
+        }
+        
+        .auth-title {
+            color: var(--text-dark);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .auth-subtitle {
+            color: #546E7A;
+            margin-bottom: 2rem;
+        }
+        
+        .form-floating {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-control, .form-select {
+            border-radius: 12px;
+            border: 2px solid #E0E0E0;
+            padding: 1rem 1rem 1rem 3rem;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .input-group {
+            position: relative;
+        }
+        
+        .input-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #546E7A;
+            z-index: 10;
+        }
+
+        .textarea-icon {
+            top: 1rem;
+            transform: none;
+        }
+        
+        .auth-button {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            background: var(--gradient-primary);
+            border: none;
+            color: white;
+            transition: var(--transition);
+            margin-bottom: 1.5rem;
+        }
+        
+        .auth-button:hover {
+            background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .auth-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .contact-info {
+            background: rgba(46, 125, 50, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info h5 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            color: #546E7A;
+        }
+
+        .contact-item i {
+            width: 20px;
+            margin-right: 0.75rem;
+            color: var(--primary-green);
+        }
+        
+        .error-message {
+            color: var(--error);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        
+        .form-control.is-invalid, .form-select.is-invalid {
+            border-color: var(--error);
+        }
+
+        .success-message {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid var(--secondary-green);
+            color: var(--text-dark);
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            display: none;
+        }
+        
+        .home-link {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+            z-index: 10;
+            transition: var(--transition);
+        }
+        
+        .home-link:hover {
+            color: var(--secondary-green);
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .auth-card {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            
+            .home-link {
+                top: 1rem;
+                left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <a href="index.html" class="home-link">
+            <i class="fas fa-arrow-left me-2"></i>Back to Home
+        </a>
+        
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="auth-card">
+                        <div class="auth-logo">
+                            <i class="fas fa-leaf"></i><span>Grivia</span>
+                            
+                            <h2 class="auth-title">Get in Touch</h2>
+                            <p class="auth-subtitle">We'd love to hear from you. Send us a message!</p>
+                        </div>
+
+                        <div class="contact-info">
+                            <h5><i class="fas fa-info-circle me-2"></i>Contact Information</h5>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>hello@grivia.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+91 7894561595</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 GT Road, Howrah, pin-711110</span>
+                            </div>
+                        </div>
+
+                        <div class="success-message" id="successMessage">
+                            <i class="fas fa-check-circle me-2"></i>
+                            Thank you for your message! We'll get back to you within 24 hours.
+                        </div>
+                        
+                        <form id="contactForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <i class="fas fa-user input-icon"></i>
+                                        <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                                        <div class="error-message" id="firstNameError">First name is required</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <i class="fas fa-user input-icon"></i>
+                                        <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                                        <div class="error-message" id="lastNameError">Last name is required</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email Address" required>
+                                <div class="error-message" id="emailError">Please enter a valid email address</div>
+                            </div>
+
+                            <div class="input-group">
+                                <i class="fas fa-phone input-icon"></i>
+                                <input type="tel" class="form-control" id="phone" placeholder="Phone Number (Optional)">
+                            </div>
+
+                            <div class="input-group">
+                                <i class="fas fa-tag input-icon"></i>
+                                <select class="form-select" id="subject" required>
+                                    <option value="">Select Subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="error-message" id="subjectError">Please select a subject</div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <i class="fas fa-comment textarea-icon input-icon"></i>
+                                <textarea class="form-control" id="message" placeholder="Your Message" required></textarea>
+                                <div class="error-message" id="messageError">Please enter your message</div>
+                            </div>
+                            
+                            <button type="submit" class="btn auth-button" id="submitBtn">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Replaced inline JavaScript with external contact.js file -->
+    <script src="contact.js"></script>
+</body>
+</html>
