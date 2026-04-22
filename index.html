@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grivia - Gamified Environmental Education</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <i class="fas fa-leaf"></i>
+          <span>Grivia</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="explore.html">Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="games.html">Games</a>
+            </li>
+          </ul>
+          <!--<div class="navbar-nav">
+            <button
+              class="btn btn-outline-success me-2"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+            <button
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#signupModal"
+            >
+              Sign Up
+            </button>
+          </div>-->
+          <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline-success me-2">Login</a>
+                    <a href="signup.html" class="btn btn-success">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center min-vh-100">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <h1 class="display-4 fw-bold mb-4">
+                Transform Environmental Education Through Action
+              </h1>
+              <p class="lead mb-4">
+                Bridge the gap between theoretical knowledge and real-world
+                impact. Our gamified platform makes environmental education
+                engaging, practical, and action-oriented.
+              </p>
+              <div class="hero-buttons">
+                <!--<button
+                  class="btn btn-success btn-lg me-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#signupModal"
+                >
+                  Get Started
+                </button>-->
+                <a href="signup.html" class="btn btn-success btn-lg me-3">Start Learning</a>
+                <button class="btn btn-outline-success btn-lg">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image">
+              <div class="floating-card">
+                <i class="fas fa-seedling"></i>
+                <h5>Plant Trees</h5>
+                <p>+50 Eco Points</p>
+              </div>
+              <div class="floating-card">
+                <i class="fas fa-recycle"></i>
+                <h5>Waste Sorting</h5>
+                <p>+30 Eco Points</p>
+              </div>
+              <div class="floating-card">
+                <i class="fas fa-bolt"></i>
+                <h5>Energy Saving</h5>
+                <p>+40 Eco Points</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5">
+            <h2 class="section-title">The Problem We're Solving</h2>
+            <p class="section-subtitle">
+              Current environmental education falls short of creating real
+              change
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="problem-card">
+              <i class="fas fa-book-open"></i>
+              <h4>Theoretical Only</h4>
+              <p>
+                Students learn about environmental issues but lack practical
+                application opportunities
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="problem-card">
+              <i class="fas fa-tired"></i>
+              <h4>Low Engagement</h4>
+              <p>
+                Traditional methods fail to capture student interest and
+                maintain long-term motivation
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="problem-card">
+              <i class="fas fa-disconnect"></i>
+              <h4>No Real Habits</h4>
+              <p>
+                Knowledge doesn't translate into actual eco-friendly behaviors
+                and lifestyle changes
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5">
+            <h2 class="section-title">Our Solution Features</h2>
+            <p class="section-subtitle">
+              Combining digital learning with real-world environmental action
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-gamepad"></i>
+              </div>
+              <h4>Gamified Learning</h4>
+              <p>
+                Earn points, badges, and compete on leaderboards while learning
+                about sustainability
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-tasks"></i>
+              </div>
+              <h4>Real-World Tasks</h4>
+              <p>
+                Complete actual environmental actions like tree planting and
+                waste segregation
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h4>Progress Tracking</h4>
+              <p>
+                Monitor your environmental impact with detailed analytics and
+                progress reports
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h4>Community</h4>
+              <p>
+                Join eco-clubs, participate in challenges, and connect with
+                like-minded students
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">
+              Simple steps to start your eco-learning journey
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="process-card">
+              <div class="process-number">1</div>
+              <h4>Learn</h4>
+              <p>
+                Complete interactive modules and quizzes about environmental
+                topics
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="process-card">
+              <div class="process-number">2</div>
+              <h4>Act</h4>
+              <p>
+                Perform real-world eco-tasks and upload proof of your
+                environmental actions
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="process-card">
+              <div class="process-number">3</div>
+              <h4>Compete</h4>
+              <p>
+                Earn points, unlock badges, and climb the leaderboard with
+                fellow eco-warriors
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sample Quiz Section -->
+    <section id="quiz-section" class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="quiz-container">
+              <h3 class="text-center mb-4">Environmental Knowledge Quiz</h3>
+              <div id="quiz-content">
+                <div class="quiz-question active" data-question="0">
+                  <h5>
+                    What percentage of plastic waste is actually recycled
+                    globally?
+                  </h5>
+                  <div class="quiz-options">
+                    <div class="quiz-option" data-answer="false">A) 50%</div>
+                    <div class="quiz-option" data-answer="false">B) 25%</div>
+                    <div class="quiz-option" data-answer="true">C) 9%</div>
+                    <div class="quiz-option" data-answer="false">D) 75%</div>
+                  </div>
+                </div>
+                <div class="quiz-question" data-question="1">
+                  <h5>Which activity saves the most water?</h5>
+                  <div class="quiz-options">
+                    <div class="quiz-option" data-answer="false">
+                      A) Taking shorter showers
+                    </div>
+                    <div class="quiz-option" data-answer="true">
+                      B) Fixing leaky faucets
+                    </div>
+                    <div class="quiz-option" data-answer="false">
+                      C) Using dishwasher
+                    </div>
+                    <div class="quiz-option" data-answer="false">
+                      D) Washing car less
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz-controls mt-4">
+                <button id="quiz-prev" class="btn btn-outline-success" disabled>
+                  Previous
+                </button>
+                <button id="quiz-next" class="btn btn-success">Next</button>
+                <button
+                  id="quiz-submit"
+                  class="btn btn-success"
+                  style="display: none"
+                >
+                  Submit Quiz
+                </button>
+              </div>
+              <div
+                id="quiz-results"
+                style="display: none"
+                class="text-center mt-4"
+              >
+                <h4>Quiz Complete!</h4>
+                <p>You scored <span id="quiz-score"></span> out of 2</p>
+                <div class="badge bg-success">+25 Eco Points Earned!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real-Life Tasks Section -->
+    <section id="tasks-section" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-5">
+            <h2 class="section-title">Real-Life Eco Tasks</h2>
+            <p class="section-subtitle">
+              Take action and make a real difference
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="task-card">
+              <div class="task-icon">
+                <i class="fas fa-seedling"></i>
+              </div>
+              <h4>Plant a Tree</h4>
+              <p>
+                Plant a sapling in your community and help combat climate change
+              </p>
+              <div class="task-points">+50 Eco Points</div>
+              <button
+                class="btn btn-success btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#taskModal"
+                data-task="tree"
+              >
+                Start Task
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="task-card">
+              <div class="task-icon">
+                <i class="fas fa-recycle"></i>
+              </div>
+              <h4>Waste Segregation</h4>
+              <p>
+                Properly segregate waste for a week and document the process
+              </p>
+              <div class="task-points">+30 Eco Points</div>
+              <button
+                class="btn btn-success btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#taskModal"
+                data-task="waste"
+              >
+                Start Task
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="task-card">
+              <div class="task-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h4>Energy Conservation</h4>
+              <p>
+                Implement energy-saving practices and track your usage reduction
+              </p>
+              <div class="task-points">+40 Eco Points</div>
+              <button
+                class="btn btn-success btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#taskModal"
+                data-task="energy"
+              >
+                Start Task
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-title mb-4">
+              Ready to Transform Environmental Education?
+            </h2>
+            <p class="lead mb-4">
+              Join thousands of students and teachers already making a
+              difference
+            </p>
+            <!--<button
+              class="btn btn-success btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#signupModal"
+            >
+              Get Started Today
+            </button>-->
+            <a href="signup.html" class="btn btn-success btn-lg me-3">Get Started Today</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5><i class="fas fa-leaf me-2"></i>Grivia</h5>
+            <p>Transforming environmental education through action</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <div class="social-links">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <!--<div class="modal fade" id="loginModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Login to EcoLearn</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="loginEmail"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="loginPassword"
+                  required
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="rememberMe"
+                />
+                <label class="form-check-label" for="rememberMe"
+                  >Remember me</label
+                >
+              </div>
+              <button type="submit" class="btn btn-success w-100">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+    <!-- Sign Up Modal -->
+    <!--<div class="modal fade" id="signupModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Join EcoLearn</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="signupForm">
+              <div class="mb-3">
+                <label for="signupName" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="signupName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="signupEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="signupEmail"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="signupRole" class="form-label">I am a</label>
+                <select class="form-select" id="signupRole" required>
+                  <option value="">Select your role</option>
+                  <option value="student">Student</option>
+                  <option value="teacher">Teacher</option>
+                  <option value="admin">School Admin</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="signupPassword" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="signupPassword"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="signupConfirmPassword" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="signupConfirmPassword"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-success w-100">
+                Create Account
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+    <!-- Task Modal -->
+    <div class="modal fade" id="taskModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="taskModalTitle">Start Eco Task</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="taskContent">
+              <p id="taskDescription">Task description will appear here</p>
+              <div class="mb-3">
+                <label for="taskProof" class="form-label"
+                  >Upload Proof (Photo)</label
+                >
+                <input
+                  type="file"
+                  class="form-control"
+                  id="taskProof"
+                  accept="image/*"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="taskNotes" class="form-label"
+                  >Additional Notes</label
+                >
+                <textarea
+                  class="form-control"
+                  id="taskNotes"
+                  rows="3"
+                  placeholder="Describe your action and its impact..."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-success" id="submitTask">
+              Submit Task
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

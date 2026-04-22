@@ -1,0 +1,57 @@
+
+.main-content{
+    background-color: #daecc3;
+    text-align: center;
+    padding: 4rem 0rem 4rem 0rem;
+}
+.content-section-1 , .content-section-2 , .content-section-3 , .content-section-4{
+    display: flex;
+    height: 18rem;
+    width: 50%;
+    background-color: #92C84F;
+    margin: 2rem 10rem 2rem 24rem;
+    border-radius: 3rem;
+    color: white;
+}
+#image{
+    margin-left: 3rem;
+    margin-right: 3rem;
+    width: 13rem;
+    height: 13rem;
+    background-color: white;
+    border-radius: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.Logo{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    
+}
+.content-section-1-text , .content-section-2-text , .content-section-3-text , .content-section-4-text{
+    margin: 2rem 3rem 2rem 0rem;
+    width: 50%;
+}
+.text-content-1-01 , .text-content-2-01 , .text-content-3-01 , .text-content-4-01{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.text-content-1-02 , .text-content-2-02 , .text-content-3-02 , .text-content-4-02{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.start-course-button{
+    width: 10rem;
+    height: 2rem;
+    background-color: #84AE12;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.start-course-button:hover{
+    background-color: #6b8e0c;
+}
